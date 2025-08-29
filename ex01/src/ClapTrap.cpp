@@ -6,7 +6,7 @@
 /*   By: barjimen <barjimen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/11 17:40:11 by barjimen          #+#    #+#             */
-/*   Updated: 2025/08/11 19:14:18 by barjimen         ###   ########.fr       */
+/*   Updated: 2025/08/29 20:32:29 by barjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ ClapTrap::~ClapTrap()
     std::cout << "[POKÉMON CENTER]" << " ClapTrap " << name << " fainted and returned to its Poké Ball!" << std::endl;
 }
 
-
+ 
 //Public methods
 void ClapTrap::attack(const std::string &target)
 {
@@ -65,17 +65,17 @@ void ClapTrap::takeDamage(unsigned int amount)
 {
     if (hitPoints <= 0)
     {
-        std::cout << name << " is already fainted!" << std::endl;
+        std::cout << "[POKÉDEX]" << name << " is already fainted!" << std::endl;
         return;
     }
     hitPoints -= amount;
     if (hitPoints < 0)
         hitPoints = 0;
-    std::cout << name << " took " << amount << " damage! HP left: " << hitPoints << std::endl;
+    std::cout << "[POKÉDEX]" << name << " took " << amount << " damage! HP left: " << hitPoints << std::endl;
     
     if (hitPoints == 0)
     {
-        std::cout << name << " fainted!" << std::endl;
+        std::cout << "[POKÉDEX]" << name << " fainted!" << std::endl;
     }
 }
 
@@ -84,16 +84,16 @@ void ClapTrap::beRepaired(unsigned int amount)
 {
     if (hitPoints <= 0)
     {
-        std::cout << name << " cant't heal because it is fainted!" << std::endl;
+        std::cout << "[POKÉDEX]" << name << " cant't heal because it is fainted!" << std::endl;
         return;
     }
     if (energyPoints <= 0)
     {
-        std::cout << name << " has no pp(energy) left to heal!" << std::endl;
+        std::cout << "[POKÉDEX]" << name << " has no pp(energy) left to heal!" << std::endl;
         return;
     }
 
     energyPoints--;
     hitPoints += amount;
-    std::cout << name << " used potion and recovered " << amount << " HP! Current HP: "<< hitPoints << std::endl;
+    std::cout << "[POKÉDEX]" << name << " used potion and recovered " << amount << " HP! Current HP: "<< hitPoints << std::endl;
 }

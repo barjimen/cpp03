@@ -6,7 +6,7 @@
 /*   By: barjimen <barjimen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/11 17:40:11 by barjimen          #+#    #+#             */
-/*   Updated: 2025/08/12 19:27:33 by barjimen         ###   ########.fr       */
+/*   Updated: 2025/08/26 19:25:45 by barjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ ClapTrap::~ClapTrap()
     std::cout << "[POKÉMON CENTER]" << " ClapTrap " << name << " fainted and returned to its Poké Ball!" << std::endl;
 }
 
-
+ 
 //Public methods
 void ClapTrap::attack(const std::string &target)
 {

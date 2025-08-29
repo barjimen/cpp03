@@ -6,7 +6,7 @@
 /*   By: barjimen <barjimen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/11 21:32:09 by barjimen          #+#    #+#             */
-/*   Updated: 2025/08/11 22:26:21 by barjimen         ###   ########.fr       */
+/*   Updated: 2025/08/29 20:32:44 by barjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,14 @@ ScavTrap::ScavTrap(const std::string &name) : ClapTrap(name)
     hitPoints = 100;
     energyPoints = 50;
     attackDamage = 20;
-    std::cout << "[POKÉDEX] ScavTrap " << this->name << " joins the battle! HP: "
-    << hitPoints << ", PP(energy): " << energyPoints << ", Attack: "
+    std::cout << "[POKÉDEX] A wild ScavTrap named " << this->name << " joins the battle! HP: "
+    << hitPoints << ", PP (energy): " << energyPoints << ", Attack: "
     << attackDamage << std::endl;    
 }
 
 ScavTrap::ScavTrap(const ScavTrap &other) : ClapTrap(other)
 {
-    std::cout << "[POKEDEX] A Ditto ScavTrap of " << other.name << " has been created!" << std::endl;
+    std::cout << "[POKEDEX] A Ditto of ScavTrap named " << other.name << " has been created!" << std::endl;
 }
 
 ScavTrap &ScavTrap::operator=(const ScavTrap &other)
